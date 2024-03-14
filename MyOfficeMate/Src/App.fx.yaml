@@ -1,0 +1,68 @@
+App As appinfo:
+    BackEnabled: =false
+    MinScreenHeight: =320
+    MinScreenWidth: =320
+    OnStart: |
+        =Set(
+            varTimer,
+            true
+        );
+        //Get current user details
+        Set(
+            currentUser,
+            User()
+        );
+        Set(
+            curUserDetails,
+            Office365Users.MyProfile()
+        );
+        Set(
+            selectedPerson,
+            curUserDetails
+        );
+        Set(
+            curUserPhoto,
+            Office365Users.UserPhotoV2(curUserDetails.Mail)
+        );
+        If(
+            Param("ScreenToShow") = "New",
+            Navigate(DateSelection)
+        );
+        Set(
+            varTimer,
+            false
+        );
+        //Controls if the app runs in light or dark mode. Change this value to Light if you want light mode
+        Set(
+            varTheme,
+            "Light"
+        );
+        //Controls if you can select multiple desks at a time
+        Set(
+            varAllowMultipleDeskSelections,
+            false
+        );
+        /*//Controls visibility of the Manage tab if the user is in the admin list
+        Set(
+            varAdmin,
+            !IsBlank(
+                LookUp(
+                    DeskAdmins,
+                    Title = curUserDetails.Mail
+                )
+            )
+        );
+        //Store local collection of desks
+        ClearCollect(
+            col_Desks,
+            Desks
+        );*/
+    Theme: =PowerAppsTheme
+
+    Host As hostControl.DefaultHostControlVariant:
+        OnCancel: =false
+        OnEdit: =false
+        OnNew: =false
+        OnSave: =false
+        OnView: =false
+

@@ -1,0 +1,93 @@
+{
+  "64852b16-4509-4d34-be4c-adfa1f496b3a": {
+    "appActions": [
+      "MyProfile",
+      "UserPhotoV2",
+      "SearchUser"
+    ],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Office 365 Users",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1672/1.0.1672.3545/office365users/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_office365users",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [
+      "Office365Users"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "64852b16-4509-4d34-be4c-adfa1f496b3a"
+  },
+  "d80f322f-4d16-4bcc-b82a-4b3c90fdf730": {
+    "appActions": [],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Office 365 Outlook",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1676/1.0.1676.3617/office365/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_office365",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [
+      "Office365Outlook"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "d80f322f-4d16-4bcc-b82a-4b3c90fdf730"
+  },
+  "f67b7cd5-95bf-4e82-94fd-eedbe286c6f4": {
+    "appActions": [
+      "providers/PowerPlatform.Governance/Operations/Read",
+      "providers/PowerPlatform.Governance/Operations/Write",
+      "providers/PowerPlatform.Governance/Operations/Delete"
+    ],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1676/1.0.1676.3617/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {
+      "https://accessholding-my.sharepoint.com/personal/nsiddiqu_accessholding_com": {
+        "dataSources": {
+          "Presence": {
+            "tableName": "009d05b9-e05a-446f-bfe7-c5913720166c"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "Presence"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "f67b7cd5-95bf-4e82-94fd-eedbe286c6f4"
+  },
+  "ffa84888-f9ab-47f9-a4e1-60a4882fa84c": {
+    "appActions": [
+      "ListOwnedGroupsV3",
+      "ListGroupMembers"
+    ],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Office 365 Groups",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1664/1.0.1664.3477/office365groups/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_office365groups",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [
+      "Office365Groups"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "ffa84888-f9ab-47f9-a4e1-60a4882fa84c"
+  }
+}
